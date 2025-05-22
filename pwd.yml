@@ -3,7 +3,7 @@ version: "3"
 services:
   backend:
     image: andymendez/erpnext:v15.62.0
-    platform: linux/arm
+    platform: linux/arm64
     networks:
       - frappe_network
     deploy:
