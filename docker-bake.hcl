@@ -2,7 +2,7 @@
 # Reference: https://github.com/docker/buildx/blob/master/docs/reference/buildx_bake.md
 
 variable "REGISTRY_USER" {
-    default = "frappe"
+    default = "andymendez"
 }
 
 variable PYTHON_VERSION {
@@ -13,11 +13,13 @@ variable NODE_VERSION {
 }
 
 variable "FRAPPE_VERSION" {
-    default = "develop"
+    #default = "develop"
+      default = "v15.62.0"
 }
 
 variable "ERPNEXT_VERSION" {
-    default = "develop"
+    # default = "develop"
+      default = "v15.62.0"
 }
 
 variable "FRAPPE_REPO" {
