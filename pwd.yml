@@ -4,6 +4,7 @@ services:
   backend:
     image: andymendez/erpnext:v15.62.0
     platform: linux/arm64
+    restart: unless-stopped
     networks:
       - frappe_network
     deploy:
@@ -21,6 +22,7 @@ services:
   configurator:
     image: andymendez/erpnext:v15.62.0
     platform: linux/arm64
+    restart: unless-stopped
     networks:
       - frappe_network
     deploy:
@@ -51,6 +53,7 @@ services:
   create-site:
     image: andymendez/erpnext:v15.62.0
     platform: linux/arm64
+    restart: unless-stopped
     networks:
       - frappe_network
     deploy:
@@ -108,6 +111,7 @@ services:
   frontend:
     image: andymendez/erpnext:v15.62.0
     platform: linux/arm64
+    restart: unless-stopped
     networks:
       - frappe_network
     depends_on:
@@ -138,6 +142,7 @@ services:
   queue-long:
     image: andymendez/erpnext:v15.62.0
     platform: linux/arm64
+    restart: unless-stopped
     networks:
       - frappe_network
     deploy:
@@ -155,6 +160,7 @@ services:
   queue-short:
     image: andymendez/erpnext:v15.62.0
     platform: linux/arm64
+    restart: unless-stopped
     networks:
       - frappe_network
     deploy:
@@ -172,6 +178,7 @@ services:
   redis-queue:
     image: redis:6.2-alpine
     platform: linux/arm64
+    restart: unless-stopped
     networks:
       - frappe_network
     deploy:
@@ -183,6 +190,7 @@ services:
   redis-cache:
     image: redis:6.2-alpine
     platform: linux/arm64
+    restart: unless-stopped
     networks:
       - frappe_network
     deploy:
@@ -192,6 +200,7 @@ services:
   scheduler:
     image: andymendez/erpnext:v15.62.0
     platform: linux/arm64
+    restart: unless-stopped
     networks:
       - frappe_network
     deploy:
@@ -207,6 +216,7 @@ services:
   websocket:
     image: andymendez/erpnext:v15.62.0
     platform: linux/arm64
+    restart: unless-stopped
     networks:
       - frappe_network
     deploy:
